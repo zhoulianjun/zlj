@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>&#9829;傻妞&harr;玉&#8730;儿&#9829;</title>
+		<link rel="shortcut icon" href="image/1.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="author" content="js代码" />
+		<meta name="copyright" content="js代码" />
+		<!--<embed src="music.mp3" hidden="true"/>-->
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+		<!--雪花-->
+		<script src="js/snow.js"></script>
+	</head>
+	<body>
+		<div style="text-align: center;">
+			<audio controls="controls"  loop="loop" autoplay="autoplay">
+			  <source src="music.mp3" type="audio/ogg">
+			  <source src="music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+		</div>
+		<!--start top-->
+		<div class="top">
+			<marquee behavior="alternate" style="color: peachpuff;font-weight: 900;font-size: 20px;margin: 0 50px;">时光不老，我们不散</marquee>
+		</div>
+		<!--end top-->
+		<!--start box-->
+		<div class="box animated">
+			<div class="pic">
+				<ul>
+					<li><img src="image/1.png" width="" height="" alt=""/></li>
+					<li><img src="image/2.png" width="" height="" alt=""/></li>
+					<li><img src="image/3.png" width="" height="" alt=""/></li>
+					<li><img src="image/4.png" width="" height="" alt=""/></li>
+					<li><img src="image/5.png" width="" height="" alt=""/></li>
+					<li><img src="image/6.png" width="" height="" alt=""/></li>
+				</ul>
+			</div>
+		</div>
+		<!--照片轮播图开始-->
+		<div style="display: none;margin-top: 30px;" class="animated" id="wrap">
+		    <div  id="head">
+		        <div style="background: url(image/y39.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y8.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y9.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y40.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y11.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y41.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y13.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y14.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y15.png);background-size: 100%;"></div>
+		        <div style="background: url(image/y16.png);background-size: 100%;"></div>
+		    </div>
+		</div>
+		<div id="imgBox"  style="text-align: center;">
+			<img  style="display: none;margin: 0 auto;" class="animated" src="image/y1.png" height="150px"/>
+		</div>
+		<div id="imgBox1"  style="text-align: center;margin-top: 50px;">
+			<img  style="display: none;margin: 0 auto;border-radius: 30px;" class="animated" src="image/y17.png" height="250px"/>
+		</div>
+		<div class="loveBox animated">
+			<div style="font-size: 120px;">&#9829;</div>
+			<div style="font-size: 100px;">&#9829;</div>
+			<div style="font-size: 80px;">&#9829;</div>
+			<div style="font-size: 60px;">&#9829;</div>
+			<div style="font-size: 40px;">&#9829;</div>
+		</div>
+		<div class="loveBox1 animated" style="text-align: center;position: relative;top: -80px;display: none;">
+			<img style="border-radius: 30px;" width="200" src="image/4.png"/>
+		</div>
+		<div class="loveText animated" style="border-radius: 50%;display: inline-block;padding: 50px;background: pink;position: absolute;top: 40%;left: 50%;margin-left: -166px;display: none;"> 
+			<div class="boxa1 animated" style="font-size: 20px;text-align: center;color: #FF0000;display: none;">世界上最遥远的距离</div>
+			<div class="boxa2 animated" style="font-size: 22px;text-align: center;color: #FF7F00;display: none;">不是生与死的距离</div>
+			<div class="boxa3 animated" style="font-size: 24px;text-align: center;color: #FFFF00;display: none;">不是天各一方</div>
+			<div class="boxa4 animated" style="font-size: 26px;text-align: center;color: #00FF00;display: none;">而是我就站在你面前</div>
+			<div class="boxa5 animated" style="font-size: 28px;text-align: center;color: #00FFFF;display: none;">你却不知道</div>
+			<div class="boxa6 animated" style="font-size: 30px;text-align: center;color: #0000FF;display: none;">&#9829;我爱你&#9829;</div>
+			<div class="boxa7 animated" style="font-size: 50px;text-align: center;color: #8B00FF;display: none;">&#9829;&#9829;&#9829;&#9829;&#9829;&#9829;</div>
+		</div>
+		<div class="loveBox2 animated" style="display: none;">
+			<img height="280px" style="border-radius: 30px;position: absolute;top: 45%;left: 25%;" src="image/y17.png"/>
+		</div>
+		<div class="loveBox3 animated" style="background: orangered;padding: 50px;line-height: 35px;color: #fff;font-size: 20px;border-radius: 40%;margin: 0 10px;display: none;">
+			&#9829;&#9829;傻妞&#9829;&#9829;，故事到这里结束啦！看完你笑了吗，愿你天天被快乐围绕，永远被幸福缠身，天天开<span style="font-size: 60px;position: relative;top: 4px;display: inline-block;">&#9829;</span>，永远18
+			<div style="position: absolute;top: 86%;right: 70px;">&#9829;&#9829;小周周周周亲笔&#9829;&#9829;</div>
+		</div>
+		<!--end box-->
+		<!--start text-->
+		<div id="text" class="animated"></div>
+		<!--end text-->
+		<script>
+			$(".pic ul li").each(function(i){//遍历
+				var deg=360/$(".pic ul li").size();//size个数
+				//当前的li对象 添加css样式
+				$(this).css({"transform":"rotateY("+deg*i+"deg) translateZ(216px)"});
+				$.fn.snow({
+					minSize:12,
+					maxSize:18,
+					newOn:500,
+					flakeColor:"pink"
+				});
+			});
+			var i=0;
+			var str="我不是你第一个牵手的人；不是你第一个拥抱的人；不是你第一个亲吻的人；不是你第一个拥有的人。可我希望我可以是你遇到痛苦第一个想倾诉的人；是你遇到快乐第一个想分享的人；是你遇到挫折第一个想能依靠的人；是你今生以后第一个可以相伴的人。";
+			function typing(){
+				var mydiv=document.getElementById("text");
+				mydiv.innerHTML+=str.charAt(i);
+				i++;
+				var id=setTimeout(typing,150);
+				if(i==str.length){
+					clearTimeout(id);
+					setTimeout(()=>{
+						document.querySelector('#text').classList.add('zoomInDown')
+						setTimeout(()=>{
+							document.querySelector('#text').classList.add('zoomOutDown')
+							document.querySelector('#imgBox img').style.display='block';
+							document.querySelector('#imgBox img').classList.add('rollIn')
+							var imgList=['y1.png','y43.png','y2.png','y44.png','y3.png','y45.png','y4.png','y46.png','y5.png','y6.png','y42.png'];
+							setTimeout(()=>{
+								for(let i=1;i<=imgList.length;i++){
+									(function(i){
+										var imgdata=document.querySelector('#imgBox img');
+								        setTimeout(function(){
+								        	imgdata.classList.remove('rollIn')
+								            imgdata.classList.add('rollOut');
+								            setTimeout(()=>{
+							            	 	imgdata.src='image/'+imgList[i];
+							            	 	imgdata.classList.remove('rollOut')
+							            	 	imgdata.classList.add('rollIn');
+								            	 if(i===11){//幻灯片结束，下一组幻灯片开始
+								            	 	document.querySelector('.box').classList.add('zoomOutUp')
+								            	 	setTimeout(()=>{
+								            	 		var box=document.querySelector('.box');
+														box.parentNode.removeChild(box);//删除第一个3D轮播
+														document.querySelector('#wrap').style.display='block';
+							            	 			document.querySelector('#wrap').classList.add('zoomInDown')
+							            	 			var box1=document.querySelector('#imgBox');
+														box1.parentNode.removeChild(box1);//删除循环显示的照片
+														setTimeout(()=>{
+															document.querySelector('#imgBox1 img').style.display='block';
+															document.querySelector('#imgBox1 img').classList.add('bounceInDown')
+															var imgList=['y18.png','y19.png','y20.png','y21.png','y22.png','y23.png'];
+															setTimeout(()=>{
+																document.querySelector('#imgBox1 img').classList.remove('bounceInDown')
+																document.querySelector('#imgBox1 img').src='image/y18.png';
+																document.querySelector('#imgBox1 img').classList.add('bounceInUp')
+																setTimeout(()=>{
+																	document.querySelector('#imgBox1 img').classList.remove('bounceInUp')
+																	document.querySelector('#imgBox1 img').src='image/y19.png';
+																	document.querySelector('#imgBox1 img').classList.add('bounceInLeft')
+																	setTimeout(()=>{
+																		document.querySelector('#imgBox1 img').classList.remove('bounceInLeft')
+																		document.querySelector('#imgBox1 img').src='image/y20.png';
+																		document.querySelector('#imgBox1 img').classList.add('bounceInRight')
+																		setTimeout(()=>{
+																			document.querySelector('#imgBox1 img').classList.remove('bounceInRight')
+																			document.querySelector('#imgBox1 img').src='image/y21.png';
+																			document.querySelector('#imgBox1 img').classList.add('rotateIn')
+																			setTimeout(()=>{
+																				document.querySelector('#imgBox1 img').classList.remove('rotateIn')
+																				document.querySelector('#imgBox1 img').src='image/y22.png';
+																				document.querySelector('#imgBox1 img').classList.add('rotateInDownLeft')
+																				setTimeout(()=>{
+																					document.querySelector('#imgBox1 img').classList.remove('rotateInDownLeft')
+																					document.querySelector('#imgBox1 img').src='image/y23.png';
+																					document.querySelector('#imgBox1 img').classList.add('rotateInDownRight')
+																					setTimeout(()=>{
+																						document.querySelector('#imgBox1 img').classList.remove('rotateInDownRight')
+																						document.querySelector('#imgBox1 img').src='image/y24.png';
+																						document.querySelector('#imgBox1 img').classList.add('rotateInUpLeft')
+																						setTimeout(()=>{
+																							document.querySelector('#imgBox1 img').classList.remove('rotateInUpLeft')
+																							document.querySelector('#imgBox1 img').src='image/y25.png';
+																							document.querySelector('#imgBox1 img').classList.add('rotateInUpRight')
+																							setTimeout(()=>{
+																								document.querySelector('#imgBox1 img').classList.remove('rotateInUpRight')
+																								var box2=document.querySelector('#imgBox1 img');
+																								box2.parentNode.removeChild(box2);//删除第一个3D轮播
+																								document.querySelector('.loveBox').style.display='block';
+																								document.querySelector('.loveBox').classList.add('zoomInDown');
+																								setTimeout(()=>{
+																									document.querySelector('.loveBox').classList.remove('zoomInDown');
+																									document.querySelector('.loveBox').classList.add('rotateIn');
+																									setTimeout(()=>{
+																										document.querySelector('.loveBox').classList.remove('rotateIn');
+																										document.querySelector('.loveBox').classList.add('rotateOut');
+																										setTimeout(()=>{
+																											var box3=document.querySelector('.loveBox');
+																											box3.parentNode.removeChild(box3);//删除第一个3D轮播
+																											var listTwo=['image/y26.png','image/y27.png','image/y28.png','image/y29.png','image/y30.png','image/y31.png','image/y32.png','image/y33.png','image/y34.png','image/y35.png','image/y36.png','image/y37.png','image/y38.png','image/y39.png']
+																											document.querySelector('.loveBox1').style.display='block';
+																											document.querySelector('.loveBox1').classList.add('zoomInDown')
+																											setTimeout(()=>{
+																												document.querySelector('.loveBox1').classList.remove('zoomInDown')
+																												document.querySelector('.loveBox1 img').src='image/y26.png';
+																												document.querySelector('.loveBox1').classList.add('zoomOutDown')
+																												setTimeout(()=>{
+																													document.querySelector('.loveBox1').classList.remove('zoomOutDown')
+																													document.querySelector('.loveBox1 img').src='image/y27.png';
+																													document.querySelector('.loveBox1').classList.add('zoomInDown')
+																													setTimeout(()=>{
+																														document.querySelector('.loveBox1').classList.remove('zoomInDown')
+																														document.querySelector('.loveBox1 img').src='image/y28.png';
+																														document.querySelector('.loveBox1').classList.add('zoomOutDown')
+																															setTimeout(()=>{
+																																document.querySelector('.loveBox1').classList.remove('zoomOutDown')
+																																document.querySelector('.loveBox1 img').src='image/y29.png';
+																																document.querySelector('.loveBox1').classList.add('zoomInDown')
+																																setTimeout(()=>{
+																																	document.querySelector('.loveBox1').classList.remove('zoomInDown')
+																																	document.querySelector('.loveBox1 img').src='image/y30.png';
+																																	document.querySelector('.loveBox1').classList.add('zoomOutDown')
+																																	setTimeout(()=>{
+																																		document.querySelector('.loveBox1').classList.remove('zoomOutDown')
+																																		document.querySelector('.loveBox1 img').src='image/y31.png';
+																																		document.querySelector('.loveBox1').classList.add('zoomInDown')
+																																		setTimeout(()=>{
+																																			document.querySelector('.loveBox1').classList.remove('zoomInDown')
+																																			document.querySelector('.loveBox1 img').src='image/y32.png';
+																																			document.querySelector('.loveBox1').classList.add('zoomOutDown')
+																																			setTimeout(()=>{
+																																				document.querySelector('.loveBox1').classList.remove('zoomOutDown')
+																																				document.querySelector('.loveBox1 img').src='image/y33.png';
+																																				document.querySelector('.loveBox1').classList.add('zoomInDown')
+																																				setTimeout(()=>{
+																																					document.querySelector('.loveBox1').classList.remove('zoomInDown')
+																																					document.querySelector('.loveBox1 img').src='image/y34.png';
+																																					document.querySelector('.loveBox1').classList.add('zoomOutDown')
+																																					setTimeout(()=>{
+																																						document.querySelector('.loveBox1').classList.remove('zoomOutDown')
+																																						document.querySelector('.loveBox1 img').src='image/y35.png';
+																																						document.querySelector('.loveBox1').classList.add('zoomInDown')
+																																						setTimeout(()=>{
+																																							document.querySelector('.loveBox1').classList.remove('zoomInDown')
+																																							document.querySelector('.loveBox1 img').src='image/y36.png';
+																																							document.querySelector('.loveBox1').classList.add('zoomOutDown')
+																																							setTimeout(()=>{
+																																								document.querySelector('.loveBox1').classList.remove('zoomOutDown')
+																																								document.querySelector('.loveBox1 img').src='image/y37.png';
+																																								document.querySelector('.loveBox1').classList.add('zoomInDown')
+																																								setTimeout(()=>{
+																																									document.querySelector('.loveBox1').classList.remove('zoomInDown')
+																																									document.querySelector('.loveBox1 img').src='image/y38.png';
+																																									document.querySelector('.loveBox1').classList.add('zoomOutDown')
+																																									setTimeout(()=>{
+																																										document.querySelector('.loveBox1').classList.remove('zoomOutDown')
+																																										document.querySelector('.loveBox1 img').src='image/y1.png';
+																																										document.querySelector('.loveBox1').classList.add('zoomInDown')
+																																										setTimeout(()=>{
+																																											document.querySelector('.loveBox1').classList.add('rotateOut')
+																																											setTimeout(()=>{
+																																												var box4=document.querySelector('.loveBox1');
+																																												box4.parentNode.removeChild(box4);//删除第一个3D轮播
+																																												setTimeout(()=>{
+																																													document.querySelector('.loveText').style.display='block';
+																																													document.querySelector('.loveText').classList.add('fadeInLeft')
+																																													setTimeout(()=>{
+																																														document.querySelector('.boxa1').style.display='block';
+																																														document.querySelector('.boxa1').classList.add('zoomInDown')
+																																														setTimeout(()=>{
+																																															document.querySelector('.boxa2').style.display='block';
+																																															document.querySelector('.boxa2').classList.add('zoomInDown')
+																																															setTimeout(()=>{
+																																																document.querySelector('.boxa3').style.display='block';
+																																																document.querySelector('.boxa3').classList.add('zoomInDown')
+																																																setTimeout(()=>{
+																																																	document.querySelector('.boxa4').style.display='block';
+																																																	document.querySelector('.boxa4').classList.add('zoomInDown')
+																																																	setTimeout(()=>{
+																																																		document.querySelector('.boxa5').style.display='block';
+																																																		document.querySelector('.boxa5').classList.add('zoomInDown')
+																																																		setTimeout(()=>{
+																																																			document.querySelector('.boxa6').style.display='block';
+																																																			document.querySelector('.boxa6').classList.add('zoomInDown')
+																																																			setTimeout(()=>{
+																																																				document.querySelector('.boxa7').style.display='block';
+																																																				document.querySelector('.boxa7').classList.add('zoomInDown')
+																																																				setTimeout(()=>{
+																																																					document.querySelector('.loveText').classList.add('tada')
+																																																					setTimeout(()=>{
+																																																						document.querySelector('.loveText').classList.add('zoomOutDown')
+																																																						setTimeout(()=>{
+																																																							var box5=document.querySelector('.loveText');
+																																																							box5.parentNode.removeChild(box5);//删除第一个3D轮播
+																																																							document.querySelector('.loveBox2').style.display='block';
+																																																							document.querySelector('.loveBox2').classList.add('bounceInDown')
+																																																							setTimeout(()=>{
+																																																								document.querySelector('.loveBox2').classList.remove('bounceInDown')
+																																																								document.querySelector('.loveBox2 img').src='image/y6.png';
+																																																								document.querySelector('.loveBox2').classList.add('bounceOutDown')
+																																																								setTimeout(()=>{
+																																																									document.querySelector('.loveBox2').classList.remove('bounceOutDown')
+																																																									document.querySelector('.loveBox2 img').src='image/y47.png';
+																																																									document.querySelector('.loveBox2').classList.add('bounceInLeft')
+																																																									setTimeout(()=>{
+																																																										document.querySelector('.loveBox2').classList.remove('bounceInLeft')
+																																																										document.querySelector('.loveBox2 img').src='image/y1.png';
+																																																										document.querySelector('.loveBox2').classList.add('bounceOutRight')
+																																																										setTimeout(()=>{
+																																																											document.querySelector('.loveBox2').classList.remove('bounceOutRight')
+																																																											document.querySelector('.loveBox2 img').src='image/y48.png';
+																																																											document.querySelector('.loveBox2').classList.add('bounceInRight')
+																																																											setTimeout(()=>{
+																																																												document.querySelector('.loveBox2').classList.remove('bounceInRight')
+																																																												document.querySelector('.loveBox2 img').src='image/y2.png';
+																																																												document.querySelector('.loveBox2').classList.add('bounceOutleft')
+																																																												setTimeout(()=>{
+																																																													document.querySelector('.loveBox2').classList.remove('bounceOutleft')
+																																																													document.querySelector('.loveBox2 img').src='image/y49.png';
+																																																													document.querySelector('.loveBox2').classList.add('zoomInDown')
+																																																													setTimeout(()=>{
+																																																														document.querySelector('.loveBox2').classList.remove('zoomOutUp')
+																																																														setTimeout(()=>{
+																																																															document.querySelector('.loveBox2').classList.remove('zoomOutUp')
+																																																															document.querySelector('.loveBox2 img').src='image/y3.png';
+																																																															document.querySelector('.loveBox2').classList.add('zoomInDown')
+																																																															setTimeout(()=>{
+																																																																document.querySelector('.loveBox2').classList.remove('zoomInDown')
+																																																																document.querySelector('.loveBox2 img').src='image/y50.png';
+																																																																document.querySelector('.loveBox2').classList.add('zoomOutUp')
+																																																																setTimeout(()=>{
+																																																																	document.querySelector('.loveBox2').classList.remove('zoomOutUp')
+																																																																	document.querySelector('.loveBox2 img').src='image/y5.png';
+																																																																	document.querySelector('.loveBox2').classList.add('zoomInDown')
+																																																																	setTimeout(()=>{
+																																																																		document.querySelector('.loveBox2').classList.remove('zoomInDown')
+																																																																		document.querySelector('.loveBox2').classList.add('zoomOutUp')
+																																																																		setTimeout(()=>{
+																																																																			document.querySelector('.loveBox3').style.display='block';
+																																																																			document.querySelector('.loveBox3').classList.add('zoomInDown')
+																																																																		},3000)
+																																																																	},3000)
+																																																																},3000)
+																																																															},3000)
+																																																														},3000)
+																																																													},3000)
+																																																												},3000)
+																																																											},3000)
+																																																										},3000)
+																																																									},3000)
+																																																								},3000)
+																																																							},3000)
+																																																						},3000)
+																																																					},3000)
+																																																				},5000)
+																																																			},3000)
+																																																		},3000)
+																																																	},3000)
+																																																},3000)
+																																															},3000)
+																																														},3000)
+																																													},3000)
+																																												},1000)
+																																											},3000)
+																																										},3000)
+																																									},3000)
+																																								},3000)
+																																							},3000)
+																																						},3000)
+																																					},3000)
+																																				},3000)
+																																			},3000)
+																																		},3000)
+																																	},3000)
+																																},3000)
+																															},3000)
+																													},3000)
+																												},3000)
+																											},3000)
+																										},3000)
+																									},3000)
+																								},3000)
+																							},3000)
+																						},3000)
+																					},3000)
+																				},3000)
+																			},3000)
+																		},3000)
+																	},3000)
+																},3000)
+															},3000)
+														},3000)
+								            	 	},3000)
+								            	 }
+								            },1500)
+								        },i*3000);
+								    })(i);
+								}
+							},2000)
+						},4000)
+					},1000)
+				}
+			}
+			window.onload=function(){
+				document.querySelector("html").oncontextmenu=ContextMenu;  
+				setTimeout(function(){
+					typing()
+				},7000)
+			}
+			function ContextMenu(){
+			    alert("作者已对源码特殊加密处理");  
+			    return false;  
+			}  
+		</script>
+	</body>
+</html>
