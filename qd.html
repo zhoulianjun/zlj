@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+  <title>首页</title>
+</head>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    background: url('./image/qd.png') no-repeat center;
+    background-size: cover;
+  }
+</style>
+<body>
+</body>
+</html>
+<script src="script/api.js"></script>
+<script src="script/vue.2.5.js"></script>
+<script>
+  new Vue({
+    el: '#personalCenter',
+    data: {
+
+    },
+    created: function() {
+      apiready = () => {
+        this.version_check()
+      }
+    },
+    methods: {
+      //初始化
+      version_check: function() {
+        if($api.getStorage('myPreerid')) {
+          this.read() //初始化执行事件
+        } else {
+          this.getPeerid(() => { //获取pid
+            this.read() //初始化执行事件
+          })
+        }
+      },
+      //获取peerid
+      getPeerid: function(callback) {
+        $api.request('get', '/basic/peerid', {
+          clienttype: 'ios',
+          imei: api.deviceId
+        }, (ret) => {
+          if(ret.errcode == '0') {
+            $api.setStorage('myPreerid', ret.data.peerid) //缓存peerid
+            callback()
+          } else {
+            $api.toast(ret.errinfo)
+          }
+        }, (err) => {
+          setTimeout(() => {
+            this.version_check()
+          }, 3000)
+        })
+      },
+      read: function() {
+        api.setStatusBarStyle({
+          style: 'light',
+          color: '#6ab494'
+        }) //设置状态栏颜色
+        this.isLogin() //不要引导页，如果需要引导页就删除此行，引用下面一行
+        //$api.getStorage('welcome') ? this.isLogin() : $api.opens('widget://html/welcome.html', 'welcome');//如果引导页缓存存在就执行是否已经登录否则就去引导页
+        $api.addEvent('offline', (ret, err) => {
+          $api.toast('已断开网络连接')
+        })
+      },
+      //判断是否登录
+      isLogin: function() {
+        var userInfor = $api.getStorage('userInfor');
+        if(userInfor) {
+          var network;
+          switch(api.connectionType) { //转化网络类型
+            case '2G':
+              network = 1;
+              break;
+            case '3G':
+              network = 2;
+              break;
+            case '4G':
+              network = 3;
+              break;
+            case 'wifi':
+              network = 4;
+              break;
+            default:
+              network = 5;
+          }
+          $api.request('post', '/basic/sessionid_check', {
+            username: userInfor.username, //手机号
+            app_version: api.appVersion, //APP版本号
+            device_brand: 'IOS', //设备品牌
+            device_model: api.deviceModel, //设备型号
+            device_os: 2, //系统
+            imei: api.deviceId, //设备唯一标识
+            network: network, //网络类型
+            cno: api.channel, //渠道号
+            os_version: api.systemVersion //系统版本
+          }, (ret) => {
+            if(ret.errcode == '0') {
+              $api.setStorage('userInfor', ret.data) //缓存用户资料
+              if(ret.data.status == '0' && ret.data.invitation_flag == '1') { //邀请码
+                $api.opens('widget://html/binggou/identityAuthentication/invitationCode.html', 'invitationCode')
+                return
+              }
+              if(ret.data.status == '4') { //账号被锁
+                $api.open('widget://html/alert/lock.html', 'lock')
+                return
+              }
+              $api.request('post', '/user/info', {}, (ret) => {//获取用户详细信息
+                if(ret.errcode == '0') {
+                  $api.setStorage('userInfors', ret.data)
+                  $api.opens('widget://html/index.html', 'homePage')
+                } else {
+                  $api.opens('widget://html/login/codeLogin.html', 'codeLogin')
+                }
+              },()=>{
+                $api.opens('widget://html/login/codeLogin.html', 'codeLogin')
+              })
+            } else {
+              $api.opens('widget://html/login/codeLogin.html', 'codeLogin')
+            }
+          }, (err) => {
+            console.log('qd err ! ! !')
+            $api.opens('widget://html/login/codeLogin.html', 'codeLogin')
+          })
+        } else {
+          $api.opens('widget://html//login/codeLogin.html', 'codeLogin')
+        }
+      }
+    }
+  })
+</script>
